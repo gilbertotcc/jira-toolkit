@@ -1,4 +1,3 @@
 # Jira toolkit
 
-Jira toolkit is a Python library that provides useful functions to interact with
-Jira.
+Python library to interact with Jira.
