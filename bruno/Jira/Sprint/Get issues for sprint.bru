@@ -1,0 +1,20 @@
+meta {
+  name: Get issues for sprint
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/rest/agile/1.0/sprint/:sprintId/issue?fields=*all&maxResults=5000
+  body: none
+  auth: inherit
+}
+
+params:query {
+  fields: *all
+  maxResults: 5000
+}
+
+params:path {
+  sprintId: 
+}

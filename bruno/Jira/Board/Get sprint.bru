@@ -1,0 +1,15 @@
+meta {
+  name: Get sprint
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/rest/agile/1.0/sprint/:sprintId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  sprintId: 
+}
