@@ -37,3 +37,4 @@ jobs:
         uses: lycheeverse/lychee-action@v2.7.0
         with:
           fail: true
+          failIfEmpty: false
