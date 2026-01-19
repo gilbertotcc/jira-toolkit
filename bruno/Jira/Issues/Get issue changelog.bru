@@ -1,0 +1,15 @@
+meta {
+  name: Get issue changelog
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/rest/api/3/issue/:issueIdOrKey/changelog
+  body: none
+  auth: inherit
+}
+
+params:path {
+  issueIdOrKey: 
+}
