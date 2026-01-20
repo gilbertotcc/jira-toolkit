@@ -1,0 +1,27 @@
+name: Check Python code
+
+on:
+  pull_request:
+  push:
+    branches:
+    - 'main'
+
+jobs:
+  check-python:
+    name: Check Python code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install project dependencies
+        run: uv sync --dev
+
+      - name: Run Linter
+        run: uv run ruff check
+
+      - name: Run type checker
+        run: uv run mypy

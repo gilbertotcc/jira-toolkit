@@ -1,0 +1,26 @@
+[project]
+name = "jira-toolkit"
+version = "0.1.0"
+description = "Add your description here"
+readme = "src/jira_toolkit/README.md"
+authors = [
+    { name = "Gilberto Taccari", email = "gilberto.taccari@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "jira[cli]>=3.10.5",
+    "python-dotenv>=1.2.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "ruff>=0.14.13",
+]
+
+[project.scripts]
+hello = "jira_toolkit:hello"
